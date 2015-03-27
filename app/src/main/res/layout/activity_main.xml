@@ -1,0 +1,228 @@
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/activity"
+    android:weightSum="1"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentBottom="true"
+    android:baselineAligned="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="20dp">
+
+// ts les EditText doivent avoir leur longeur de caractères limitée (différente selon l'editText considéré)
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:orientation="vertical"
+            android:id="@+id/layout_date">
+
+             // recherche par date
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/rechercher_date"
+                android:id="@+id/rechercher_date"
+                android:layout_gravity="center_horizontal" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical" android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:visibility="visible"
+                android:id="@+id/linearlayaout_date"
+                android:background="@drawable/contour">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="horizontal" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:visibility="visible"
+                    android:id="@+id/linearlayaout_radio_button_date"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginBottom="-4dp">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioButton_date"
+
+                        android:layout_gravity="center_horizontal"
+                        android:onClick="bouttonRadioMarque" />
+
+                </LinearLayout>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="horizontal" android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:visibility="visible"
+                    android:id="@+id/linearlayaout_editText"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="-26dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText_date"
+                    android:editable="false"
+                    android:inputType="date"
+                    android:textStyle="italic" />
+                </LinearLayout>
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:orientation="horizontal" android:layout_width="155dp"
+                        android:layout_height="40dp"
+                        android:weightSum="1"
+                        android:visibility="visible"
+                        android:id="@+id/linearlayaout_date"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="-45dp"
+                        android:layout_marginRight="10dp">
+                    <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/changer_date"
+                    android:id="@+id/changer_date"
+                    android:onClick="showDatePickerDialog"
+                        android:layout_gravity="right"
+                    android:textSize="16sp"
+                    android:background="@drawable/bouton_date"
+                    android:textColor="#fffdfff3" />
+                    </LinearLayout>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="horizontal"
+                    android:layout_width="192dp"
+                    android:layout_height="49dp"
+                    android:weightSum="1"
+                    android:visibility="visible"
+                    android:id="@+id/linearlayaout_spinner"
+                    android:background="@drawable/contour"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="-9dp"
+                    android:layout_marginRight="-2dp">
+
+                    <Spinner
+                    android:id="@+id/ma_periode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:spinnerMode="dropdown"
+                    android:drawSelectorOnTop="true"
+                    android:gravity="fill_horizontal|center_vertical"
+                        style="style_element_spinner" />
+                </LinearLayout>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="horizontal" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:id="@+id/linearlayaout_radio_button_periode"
+                    android:layout_marginTop="-43dp"
+                    android:layout_marginBottom="5dp">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioButton_periode"
+                        android:onClick="bouttonRadioMarque"
+                        android:nestedScrollingEnabled="true" />
+
+                </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:visibility="visible"
+                android:id="@+id/linearlayaout_texte_date"
+                android:layout_marginTop="-35dp"
+                android:layout_marginLeft="32dp"
+                style="@style/Base.TextAppearance.AppCompat.Medium">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/periode"
+                    android:id="@+id/chosir_periode"
+                    android:textSize="14.5sp"
+                    android:enabled="false"
+                    android:elegantTextHeight="false"
+                    android:nestedScrollingEnabled="false"
+                    android:textIsSelectable="false"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            </LinearLayout>
+
+            // recherche par lieu
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/rechercher_lieu"
+                android:id="@+id/rechercher_lieu"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="22dp" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:background="@drawable/contour"
+                android:weightSum="1"
+                android:visibility="visible"
+                android:id="@+id/linearlayaout_lieu"
+                android:layout_gravity="top">
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText_lieu"
+                    android:hint="@string/lieu"
+                    android:inputType="text|textAutoComplete"
+                    android:textStyle="italic"
+                    android:layout_margin="4dp" />
+
+            </LinearLayout>
+
+            // recherche par catégorie
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/rechercher_categories"
+                android:id="@+id/rechercher_categories"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:visibility="visible"
+                android:id="@+id/linearlayaout_categories"
+                android:orientation="horizontal"
+                android:baselineAligned="false"
+                android:background="@drawable/contour"
+                android:longClickable="false">
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+

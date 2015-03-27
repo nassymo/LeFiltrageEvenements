@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+    </style>
+
+    <!-- Application theme. -->
+    <style name="MonTheme" parent="AppTheme">
+
+        <!-- For the resting Spinner style -->
+        <item name="android:spinnerItemStyle">
+            @style/style_element_spinner
+        </item>
+
+
+
+    </style>
+
+    <style name="style_element_spinner">
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#ff090909</item>
+    </style>
+
+
+</resources>
+
+
