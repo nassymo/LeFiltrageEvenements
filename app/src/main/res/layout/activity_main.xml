@@ -1,7 +1,7 @@
 <LinearLayout
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="fill_parent"
     android:layout_centerHorizontal="true"
     android:id="@+id/activity"
     android:weightSum="1"
@@ -11,16 +11,28 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:paddingLeft="12dp"
     android:paddingRight="12dp"
-    android:paddingTop="20dp">
+    android:paddingTop="20dp"
+    android:background="#ffffff">
 
 // ts les EditText doivent avoir leur longeur de caractères limitée (différente selon l'editText considéré)
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="1dp"
             android:orientation="vertical"
-            android:id="@+id/layout_date">
+            android:id="@+id/layout_date"
+            android:layout_marginTop="-5dp">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:visibility="visible"
+                android:id="@+id/linearlayaout_texte_date"
+                android:orientation="horizontal"
+                android:baselineAligned="false"
+
+                android:longClickable="false">
 
              // recherche par date
             <TextView
@@ -29,15 +41,22 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/rechercher_date"
                 android:id="@+id/rechercher_date"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:textSize="20dp" />
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:orientation="vertical" android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:weightSum="1"
                 android:visibility="visible"
                 android:id="@+id/linearlayaout_date"
-                android:background="@drawable/contour">
+        android:background="@drawable/contour">
 
                 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:orientation="horizontal" android:layout_width="wrap_content"
@@ -59,6 +78,10 @@
 
                 </LinearLayout>
 
+
+
+
+
                 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:orientation="horizontal" android:layout_width="135dp"
                     android:layout_height="wrap_content"
@@ -76,6 +99,9 @@
                     android:inputType="date"
                     android:textStyle="italic" />
                 </LinearLayout>
+
+
+
 
                     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                         android:orientation="horizontal" android:layout_width="155dp"
@@ -139,6 +165,8 @@
 
                 </LinearLayout>
 
+
+
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
@@ -164,6 +192,21 @@
 
             </LinearLayout>
 
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:visibility="visible"
+                android:id="@+id/linearlayaout_texte_lieu"
+                android:orientation="horizontal"
+                android:baselineAligned="false"
+
+                android:longClickable="false"
+                android:layout_marginTop="10dp">
+
+
             // recherche par lieu
             <TextView
                 android:layout_width="match_parent"
@@ -172,7 +215,12 @@
                 android:text="@string/rechercher_lieu"
                 android:id="@+id/rechercher_lieu"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="22dp" />
+                android:textSize="20dp" />
+
+            </LinearLayout>
+
+
+
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:orientation="horizontal"
@@ -195,16 +243,69 @@
 
             </LinearLayout>
 
+
+
             // recherche par catégorie
 
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:visibility="visible"
+                android:id="@+id/linearlayaout_texte_categories1"
+                android:orientation="vertical"
+                android:baselineAligned="false"
+
+                android:longClickable="false"
+                android:layout_marginTop="15dp">
+
+
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/rechercher_categories"
                 android:id="@+id/rechercher_categories"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="25dp" />
+                android:textSize="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:visibility="visible"
+                android:id="@+id/linearlayaout_texte_categories1"
+                android:orientation="vertical"
+                android:baselineAligned="false"
+                android:layout_marginTop="-20dp"
+                android:layout_marginLeft="140dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/precisions_categories"
+                    android:id="@+id/precisions_categories"
+                    android:textSize="13dp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
@@ -212,17 +313,378 @@
                 android:weightSum="1"
                 android:visibility="visible"
                 android:id="@+id/linearlayaout_categories"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:baselineAligned="false"
+                android:longClickable="false"
                 android:background="@drawable/contour"
-                android:longClickable="false">
+                android:layout_marginTop="5dp">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:visibility="visible"
+                    android:id="@+id/linearlayaout_bouton_concert"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false"
+
+                    android:longClickable="false"
+                    android:layout_weight="0.10"
+                    android:layout_marginTop="-4dp">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:visibility="visible"
+                    android:id="@+id/linearlayaout_bouton_concert"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false"
+
+                    android:longClickable="false"
+                    android:layout_weight="0.10"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp">
+
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/bouton_concert"
+                    android:background="@drawable/bouton_concert"
+                    android:clickable="true"
+                    android:onClick="bouton_concert" />
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:visibility="visible"
+                    android:id="@+id/linearlayaout_bouton_film"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false"
+
+                    android:longClickable="false"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="32dp">
+
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/bouton_film"
+                    android:background="@drawable/bouton_film"
+                    android:onClick="bouton_films" />
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:visibility="visible"
+                    android:id="@+id/linearlayaout_bouton_affaires"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false"
+
+                    android:longClickable="false"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="19dp"
+                    android:paddingLeft="6dp">
+
+
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/bouton_affaires"
+                    android:background="@drawable/bouton_affaires"
+                    android:onClick="bouton_affaires" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:visibility="visible"
+                    android:id="@+id/linearlayaout_bouton_loisirs"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false"
+
+                    android:longClickable="false"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp">
+
+
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+
+
+                    android:id="@+id/bouton_loisirs"
+                    android:layout_weight="0.10"
+                    android:background="@drawable/bouton_loisirs"
+                    android:onClick="bouton_loisirs" />
+
+                </LinearLayout>
 
 
             </LinearLayout>
 
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:visibility="visible"
+                    android:id="@+id/linearlayaout_textes_boutons"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false"
+
+                    android:longClickable="false"
+                    android:layout_weight="0.10"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="1dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/texte_bouton_concert"
+                        android:text="@string/concerts"
+                        android:textSize="10dp"
+                        android:layout_marginLeft="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/films"
+                        android:id="@+id/texte_bouton_films"
+                        android:layout_marginLeft="37dp"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/affaires"
+                        android:id="@+id/texte_bouton_affaires"
+                        android:textSize="10dp"
+                        android:layout_marginLeft="58dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/loisirs"
+                        android:id="@+id/texte_bouton_loisirs"
+                        android:textSize="10dp"
+                        android:layout_marginLeft="52dp" />
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:visibility="visible"
+                    android:id="@+id/linearlayaout_categories"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false"
+                    android:longClickable="false"
+                    android:layout_marginTop="10dp">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:visibility="visible"
+                    android:id="@+id/linearlayaout_bouton_sciences"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false"
+
+                    android:longClickable="false"
+                    android:layout_weight="0.10"
+                    android:layout_marginLeft="25dp">
+
+                    <ImageButton
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/bouton_sciences"
+                        android:background="@drawable/bouton_sciences"
+                        android:clickable="true"
+                        android:onClick="bouton_sciences" />
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:visibility="visible"
+                    android:id="@+id/linearlayaout_bouton_sport"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false"
+
+                    android:longClickable="false"
+                    android:layout_weight="0.10"
+                    android:layout_marginLeft="30dp">
+
+                    <ImageButton
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/bouton_sport"
+                        android:clickable="true"
+                        android:background="@drawable/bouton_sport"
+                        android:onClick="bouton_sport" />
+
+                </LinearLayout>
+
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1"
+                        android:visibility="visible"
+                        android:id="@+id/linearlayaout_bouton_gastronomie"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false"
+
+                        android:longClickable="false"
+                        android:layout_weight="0.10"
+                        android:layout_marginLeft="25dp">
+
+                        <ImageButton
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:id="@+id/bouton_gastronomie"
+                            android:clickable="true"
+                            android:background="@drawable/bouton_gastronomie"
+                            android:onClick="bouton_gastronomie" />
+
+                    </LinearLayout>
+
+
+
+
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1"
+                        android:visibility="visible"
+                        android:id="@+id/linearlayaout_bouton_fete"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false"
+
+                        android:longClickable="false"
+                        android:layout_weight="0.10"
+                        android:layout_marginLeft="25dp">
+
+                        <ImageButton
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:id="@+id/bouton_nightlife"
+                            android:clickable="true"
+                            android:background="@drawable/bouton_fete"
+                            android:onClick="bouton_nightlife" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1"
+                        android:visibility="visible"
+                        android:id="@+id/linearlayaout_textes_boutons"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false"
+
+                        android:longClickable="false"
+                        android:layout_weight="0.10"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="-1dp"
+                        android:layout_marginBottom="3dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/texte_bouton_sciences"
+                            android:text="@string/sciences"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/sport"
+                            android:id="@+id/texte_bouton_films"
+                            android:textSize="10dp"
+                            android:layout_marginLeft="24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/gastronomie"
+                            android:id="@+id/texte_bouton_gastronomie"
+                            android:textSize="10dp"
+                            android:layout_marginLeft="44dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/nightlife"
+                            android:id="@+id/texte_bouton_nightlife"
+                            android:textSize="10dp"
+                            android:layout_marginLeft="29dp" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:orientation="horizontal" android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:weightSum="1"
+                        android:visibility="visible"
+                        android:id="@+id/linearlayaout_bouton_filtrage"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp">
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/validation_filtrage"
+                            android:id="@+id/validation_filtrage"
+                            android:onClick="validation_filtrage"
+                            android:layout_gravity="right"
+                            android:textSize="16sp"
+                            android:background="@drawable/bouton_filtrage"
+                            android:textColor="#fffdfff3" />
+                    </LinearLayout>
 
         </LinearLayout>
 
 
-    </LinearLayout>
+
 

@@ -4,7 +4,7 @@
              android:id="@+id/contour">
 
     <stroke android:width="2dp"
-        android:color="#208C9A" />
+        android:color="#317A8A" />
 
     <solid android:color="#ffffff"/>
 

@@ -29,6 +29,25 @@
 
 
     <string name="rechercher_categories">Par catégorie</string>
+    <string name="precisions_categories"><i> (selectionnez au plus 3 catégories) </i></string>
+
+    <string name="concerts">Musique et concerts</string>
+    <string name="films">Films</string>
+    <string name="affaires">Affaires</string>
+    <string name="loisirs">Loisirs</string>
+    <string name="sciences">Sciences et technologie</string>
+    <string name="sport">Sports</string>
+    <string name="gastronomie">Gastronomie</string>
+    <string name="nightlife">Vie nocturne</string>
+
+    <string name="validation_filtrage">Filtrer les résultats</string>
+
+
+
+
+
+
+
 
 
 

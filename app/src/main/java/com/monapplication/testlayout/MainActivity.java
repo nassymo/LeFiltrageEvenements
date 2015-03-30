@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -36,10 +37,16 @@ public class MainActivity extends FragmentActivity {
     //delcaration du bouton lançant le dialogue avec selecteur de date
     Button bouton_date ;
 
-   // autres variables internes à la classe
-    private int annee ;
-    private int mois ;
-    private int jour;
+    ImageButton bouton_concert ;
+    ImageButton bouton_affaires ;
+    ImageButton bouton_loisirs ;
+    ImageButton bouton_nightlife;
+    ImageButton bouton_sport ;
+    ImageButton bouton_gastronomie ;
+    ImageButton bouton_sciences ;
+    ImageButton bouton_films ;
+
+   
 
     // declaration des radiobuttons
 
@@ -63,6 +70,15 @@ public class MainActivity extends FragmentActivity {
         mon_spinner = (Spinner) findViewById(R.id.ma_periode);
 
         bouton_date = (Button) findViewById(R.id.changer_date);
+        bouton_concert = (ImageButton)findViewById(R.id.bouton_concert);
+        bouton_affaires = (ImageButton)findViewById(R.id.bouton_affaires) ;
+        bouton_films = (ImageButton)findViewById(R.id.bouton_film);
+        bouton_nightlife= (ImageButton)findViewById(R.id.bouton_nightlife);
+        bouton_sport = (ImageButton)findViewById(R.id.bouton_sport) ;
+        bouton_gastronomie = (ImageButton)findViewById(R.id.bouton_gastronomie);
+        bouton_sciences = (ImageButton)findViewById(R.id.bouton_sciences) ;
+        bouton_loisirs = (ImageButton) findViewById(R.id.bouton_loisirs) ;
+
 
         choisir_periode = (TextView)findViewById(R.id.chosir_periode) ;
 
@@ -168,6 +184,162 @@ public class MainActivity extends FragmentActivity {
                 break;
     }
 }
+
+//selection catégories
+
+    //initialisation des compteurs pour chaque bouton (comptent le nombre de fois que l'on a cliqué le bouton, pour pouvoir selectionner/deselectionner
+    int compteur_concert=0, compteur_affaires=0, compteur_films=0, compteur_loisirs=0,
+    compteur_sport=0, compteur_sciences=0, compteur_gastronomie=0, compteur_nightlife=0;
+
+    // apelée quznd l'usager presse le bouton de la catégorie "musique et concert"
+    public void bouton_concert(View view) {
+        // ce qu'on fait (cf avec query ce que représente choix de cette catégorie)
+
+        if (compteur_concert%2 ==0 ) {
+            bouton_concert.setBackgroundResource(R.drawable.bouton_concert_appuye);
+        }
+
+        else {
+            bouton_concert.setBackgroundResource(R.drawable.bouton_concert_non_appuye);
+        }
+
+        compteur_concert++ ;
+    }
+
+    // apelée quznd l'usager presse le bouton de la catégorie "films et cinema"
+    public void bouton_films(View view) {
+        // ce qu'on fait (cf avec query ce que représente choix de cette catégorie)
+
+        if (compteur_films%2 ==0 ) {
+            bouton_films.setBackgroundResource(R.drawable.bouton_film_appuye);
+        }
+
+        else {
+            bouton_films.setBackgroundResource(R.drawable.bouton_film_non_appuye);
+        }
+
+        compteur_films++ ;
+
+
+    }
+
+    // apelée quznd l'usager presse le bouton de la catégorie "affaires"
+    public void bouton_affaires(View view) {
+        // ce qu'on fait (cf avec query ce que représente choix de cette catégorie)
+
+
+        if (compteur_affaires%2 ==0 ) {
+        bouton_affaires.setBackgroundResource(R.drawable.bouton_affaire_appuye);
+        }
+
+        else{
+            bouton_affaires.setBackgroundResource(R.drawable.bouton_affaire_non_appuye);
+        }
+
+       compteur_affaires++ ;
+    }
+
+
+    // apelée quznd l'usager presse le bouton de la catégorie "loisirs"
+    public void bouton_loisirs(View view) {
+        // ce qu'on fait (cf avec query ce que représente choix de cette catégorie)
+
+        if (compteur_loisirs%2 ==0 ) {
+            bouton_loisirs.setBackgroundResource(R.drawable.bouton_loisirs_appuye);
+        }
+
+       else {
+            bouton_loisirs.setBackgroundResource(R.drawable.bouton_loisirs_non_appuye);
+        }
+
+        compteur_loisirs++ ;
+
+    }
+
+    // apelée quznd l'usager presse le bouton de la catégorie "sciences"
+    public void bouton_sciences(View view) {
+        // ce qu'on fait (cf avec query ce que représente choix de cette catégorie)
+
+        if (compteur_sciences%2 ==0 ) {
+            bouton_sciences.setBackgroundResource(R.drawable.bouton_sciences_appuye);
+        }
+
+        else {
+            bouton_sciences.setBackgroundResource(R.drawable.bouton_sciences_non_appuye);
+        }
+
+        compteur_sciences++ ;
+
+
+    }
+
+    // apelée quznd l'usager presse le bouton de la catégorie "sport"
+    public void bouton_sport(View view) {
+        // ce qu'on fait (cf avec query ce que représente choix de cette catégorie)
+
+        if (compteur_sport%2 ==0 ) {
+            bouton_sport.setBackgroundResource(R.drawable.bouton_sport_appuye);
+        }
+
+        else {
+            bouton_sport.setBackgroundResource(R.drawable.bouton_sport_non_appuye);
+        }
+
+        compteur_sport++ ;
+
+
+    }
+
+    // apelée quznd l'usager presse le bouton de la catégorie "gastronomie"
+    public void bouton_gastronomie(View view) {
+        // ce qu'on fait (cf avec query ce que représente choix de cette catégorie)
+
+        if (compteur_gastronomie %2 ==0 ) {
+            bouton_gastronomie.setBackgroundResource(R.drawable.bouton_gastronomie_appuye);
+        }
+
+        else {
+            bouton_gastronomie.setBackgroundResource(R.drawable.bouton_gastronomie_non_appuye);
+        }
+
+        compteur_gastronomie++ ;
+    }
+
+    // apelée quznd l'usager presse le bouton de la catégorie "vie nocturne"
+    public void bouton_nightlife(View view) {
+        // ce qu'on fait (cf avec query ce que représente choix de cette catégorie)
+
+        if (compteur_nightlife%2 ==0 ) {
+            bouton_nightlife.setBackgroundResource(R.drawable.bouton_fete_appuye);
+        }
+
+        else {
+            bouton_nightlife.setBackgroundResource(R.drawable.bouton_fete_non_appuye);
+        }
+
+        compteur_nightlife++ ;
+    }
+
+
+    // apelée quznd l'usager presse le bouton "valider le filtrage"
+    public void validation_filtrage(View view) {
+        // ce qu'on fait (lancement query et affichage listview etc.)
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
