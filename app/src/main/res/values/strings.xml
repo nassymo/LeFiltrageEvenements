@@ -7,11 +7,9 @@
     <string name="titre_filtrer">""</string>
 
     <string name="rechercher_date">Par date</string>
-    <string name="periode">Choisir par période : </string>
-    <string name="changer_date">Changer de date</string>
-
-
-
+    <string name="date_debut">Modifier la date de début </string>
+    <string name="date_fin">Modifier la date de fin     </string>
+    <string name="message_toast_erreurs_dates">La date de fin doit être obligatoirement ultérieure à la date de début.</string>
 
 
     <string-array name="dates_array" >
@@ -29,11 +27,10 @@
 
 
     <string name="rechercher_categories">Par catégorie</string>
-    <string name="precisions_categories"><i> (selectionnez au plus 3 catégories) </i></string>
 
     <string name="concerts">Musique et concerts</string>
     <string name="films">Films</string>
-    <string name="affaires">Affaires</string>
+    <string name="musee">Art et Musées</string>
     <string name="loisirs">Loisirs</string>
     <string name="sciences">Sciences et technologie</string>
     <string name="sport">Sports</string>
